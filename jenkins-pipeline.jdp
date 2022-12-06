@@ -1,0 +1,25 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Pull') { 
+            steps {
+                git 'https://github.com/apurvaRD/devops-b27.git'
+            }
+        }
+        stage('Build') { 
+            steps {
+                echo 'successfully build'
+            }
+        }
+        stage('Test') { 
+            steps {
+               echo 'successfully test' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'successfully deploy' 
+            }
+        }
+    }
+}
